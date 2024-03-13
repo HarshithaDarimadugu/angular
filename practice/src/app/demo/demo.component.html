@@ -1,0 +1,48 @@
+<div>
+    <h1 class=" mt-4 text-center col-6">Manage Mobiles</h1>
+   <div class="col-2 mt-4">
+    <button class="btn btn-success">Add Mobile</button>
+   </div>   
+</div>
+
+<div class="headers">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>mobile</th>
+                <th>price(Rs)</th>
+                <th>RAM</th>
+                <th>storage</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of mob">
+                <td>{{m['mobile']}}</td>
+                <td>{{m['price']}}</td>
+                <td>{{m['RAM']}}</td>
+                <td>{{m['storage']}}</td>
+                <td>
+                    <button class="btn btn-primary">Edit</button>
+                </td>
+                &nbsp;
+                <td >
+                    <button class="btn btn-danger" (click)="deletemobile()">delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <h1 class="text-center text-primary">Add Mobile</h1>
+                <label>name:</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+</div>
